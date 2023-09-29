@@ -1,0 +1,83 @@
+/* Apply the background styling to the body */
+body {
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+  min-height: 100vh; /* Adjust to full viewport height */
+  font-family: 'Helvetica Neue', sans-serif; /* Correct the font family name */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Style for the container */
+.box {
+  width: 300px; /* Adjust the width as needed */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #916cd2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Style for the form */
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center form items horizontally */
+}
+
+/* Style for the input fields */
+.item input{
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Take up full width */
+}
+
+/* Style for the buttons */
+.item button {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #b0c0ff; /* Change the background color as desired */
+  color: #000000; /* Text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Take up full width */
+}
+
+/* Style for the heading */
+h1 {
+  color: #ffffff; /* Text color for the heading */
+  text-align: center;
+}
+
+
+/* Placeholder style */
+::placeholder {
+  color: grey;
+  opacity: 0.6; /* Adjust the opacity */
+}
+
+/* Style for the footer */
+footer {
+  color: rgba(0, 0, 0, 0.5); /* Text color for the footer */
+  text-align: center;
+  margin-top: 20px; /* Add some spacing to the top */
+}
+p a{
+  color:rgb(255, 255, 255);
+}
+ button{
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #b0c0ff; /* Change the background color as desired */
+  color: #000000; /* Text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+ }

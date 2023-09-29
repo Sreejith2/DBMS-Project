@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="lr">
+    <head>
+        <meta charset="utf-8">
+        <title>Bus-Ticket-Booking</title>
+        <link rel="stylesheet" href="css/book.css">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <h1>Book Your Tickets</h1>
+        <form action="#" method="post">
+            <div>
+                <label for="from">From:</label>
+                <select id="from" name="from">
+                    <option value="TVM">TVM</option>
+                    <option value="CLT">CLT</option>
+                </select>
+            </div>
+            <div>
+                <label for="to">To:</label>
+                <select id="to" name="to">
+                    <option value="CLT">CLT</option>
+                    <option value="TVM">TVM</option>
+                </select>
+            </div>
+            <div>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+            </div>
+            <button type="submit" class="button">Search Buses</button>
+        </form>
+        <div class="container">
+            <% for (let i = 0; i < buses.length; i++) { %>
+                <div class="card">
+                    <h2><%= buses[i].busId %></h2>
+                    <p>Seats Left: <%= buses[i].availSeats %></p>
+                    <p>Departure: <%= buses[i].from %></p>
+                    <p>Arrival: <%= buses[i].to %></p>
+                    <form action="/book/<%= buses[i]._id %>" method="post">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="<%= buses[i].availSeats %>" required>
+                        <button type="submit" class="button">Book Now</button>
+                    </form>
+                </div>
+                <% if ((i + 1) % 3 === 0) { %>
+                    <div class="clearfix"></div>
+                <% } %>
+            <% } %>
+        </div>
+    </body>
+</html>
+

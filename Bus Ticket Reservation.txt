@@ -1,0 +1,41 @@
+Title: Bus Ticket Reservation
+
+Introduction:
+The Bus Ticket Reservation project is a web-based application designed to simplify and streamline the process of booking and managing bus tickets. It provides a user-friendly interface for passengers to search for available bus routes, book tickets, and manage their bookings. This project aims to make bus travel more convenient and efficient for both passengers and bus operators.
+
+Key Features:
+
+Bus Route Search:
+
+Passengers can search for bus routes based on the source and destination.
+The system displays available buses, departure times, and the number of available seats.
+Ticket Booking:
+
+Passengers can select their preferred bus and book tickets for a specific date.
+The system calculates and displays the total fare.
+My Bookings:
+
+Passengers can view a list of their booked tickets.
+They can also cancel tickets, which updates the available seat count for the selected bus.
+Database Integration:
+
+The project utilizes a database to store user accounts, bus information, and booking records.
+MongoDB is used as the database system to maintain data consistency.
+How it Works:
+
+Bus Route Search and Booking:
+
+Users enter their travel details, such as the source, destination, and travel date.
+The system retrieves available bus routes matching the criteria.
+Passengers can select a bus and specify the number of tickets they want to book.
+The system calculates the total fare based on the selected seats and displays it to the user.
+Users confirm the booking, and the system updates the available seat count.
+My Bookings:
+
+Passengers can access their booking history, where they see a list of all booked tickets.
+They have the option to cancel booked tickets, which not only removes the booking but also increases the available seat count for that bus.
+Database Integration:
+
+User account data, bus information, and booking records are stored in a MongoDB database.
+This ensures that user data and booking records are persisted and can be retrieved for future reference.
+This project simplifies the bus ticket reservation process, making it easy for passengers to book and manage their tickets while also helping bus operators maintain accurate seat availability records.

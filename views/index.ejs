@@ -1,0 +1,15 @@
+<%- include('header') -%>
+    <body>
+        <div class="box" id="heading">
+            <h1><%=Heading %></h1>
+        </div>
+        <div class="box">
+            <form class="item" action="/login" method="post">
+                <input type="text" name="username" placeholder="Username" autocomplete="off" required="">
+                <input type="password" name="password" placeholder="Password" autocomplete="off" required="">
+                <button name="login" type="submit" value="Login">Login</button>
+                <p href="/signup">New user ? <a href="/signup">SignUp</a> here!</p>
+            </form>
+        </div>        
+    </body>
+<%- include('footer') -%>

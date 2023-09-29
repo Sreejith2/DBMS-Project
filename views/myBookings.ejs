@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Booked Tickets</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/booked.css">
+</head>
+<body>
+    <h1>Your Booking Details</h1>
+    <div class="ticket-list">
+        <% for (let i = 0; i < bookings.length; i++) { %>
+            <div class="ticket">
+                <h2><%= bookings[i].busName %></h2>
+                <p>Date: <%= bookings[i].date %></p>
+                <p>From: <%= bookings[i].from %></p>
+                <p>To: <%= bookings[i].to %></p>
+                <p>Number of Tickets: <%= bookings[i].no_of_tickets %></p>
+                <form action="/cancel-ticket/<%= bookings[i]._id %>" method="post">
+                    <button type="submit" class="cancel-button">Cancel Ticket</button>
+                </form>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
