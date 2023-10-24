@@ -2,7 +2,7 @@
 
 body {
     background-color: #E4E9FD;
-    background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+    background-image: -webkit-linear-gradient(65deg, #FF6969 50%, #FFF5E0 50%);
     min-height: 100vh; /* Adjust to full viewport height */
     font-family: 'Helvetica Neue', sans-serif; /* Correct the font family name */
     display: flex;
@@ -21,7 +21,7 @@ body {
 }
 
 .card {
-    background-color: #e9e6e9;
+    background-color: #fbe6b8;
     border: 1px solid #000000;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -48,8 +48,9 @@ p {
 
 .button {
     display: inline-block;
-    background-color: #b0c0ff;
-    color: #000000;
+    background-color: #C70039; /* Change the background color as desired */
+    font-weight:500;
+    color: #ffffff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;

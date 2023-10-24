@@ -1,20 +1,39 @@
-/* Reset some default styles */
+@keyframes slideInLeft{
+    from{
+        transform: translateX(-300px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes slideInRight{
+    from{
+        transform: translateX(300px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
 body, html {
     margin: 0;
     padding: 0;
+    text-align: center;
+    background-image: -webkit-linear-gradient(65deg, #FF6969 50%, #FFF5E0 50%);
 }
 
-/* Center align the container */
+
 .container {
-    background-color: #E4E9FD;
-    background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+    /* background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(65deg, #FF6969 50%, #FFF5E0 50%); */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* This centers vertically */
+    height: 100vh; 
 }
 
-/* Style the boxes */
+
 .box {
     width: 200px;
     height: 200px;
@@ -27,20 +46,24 @@ body, html {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Style the box headings */
+#l{
+    animation: slideInLeft 1s ease-out 0s 1 normal both;
+}
+#r{
+    animation: slideInRight 1s ease-out 0s 1 normal both;
+}
 .box h1 {
     font-size: 24px;
     margin-top: 40px;
 }
 
-/* Add some spacing between the boxes */
 .box + .box {
     margin-left: 20px;
 }
 
 .box img {
-    max-width: 100px; /* Adjust the width as needed */
-    max-height: 100px; /* Adjust the height as needed */
+    max-width: 100px; 
+    max-height: 100px; 
 }
 .box:hover{
     cursor: pointer;
@@ -59,3 +82,5 @@ a{
     text-decoration: none;
     color: black;
 }
+
+

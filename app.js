@@ -1,9 +1,12 @@
-const express = require("express");
-const session = require("express-session");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
+import express from "express";
+import session from "express-session";
+import bodyParser from "body-parser";
+import mongoose from "mongoose";
+
+// const encrypt = require("mongoose-encryption");
 const app = express();
 const port =8000;
+const dbUrl="mongodb+srv://sreejithn2002:Test123@cluster0.2vilcq8.mongodb.net/?retryWrites=true&w=majority";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
@@ -15,13 +18,17 @@ app.use(session({
 }));
 const buses = [
 ];
-mongoose.connect("mongodb://127.0.0.1:27017/busDB", { useNewUrlParser: true });
+// mongoose.connect("mongodb://127.0.0.1:27017/busDB", { useNewUrlParser: true });
+mongoose.connect(dbUrl, { useNewUrlParser: true });
 
 // Define a user schema
 const userSchema = new mongoose.Schema({
     username: { type: String, required: true },
     password: { type: String, required: true }
 });
+
+// const secret = "ThisIsOurSecret";
+// userSchema.plugin(encrypt,{secret:secret,encryptedFields:["password"]});
 
 //Define busSchema
 const busSchema = new mongoose.Schema({
@@ -94,7 +101,7 @@ app.post("/signup",async (req,res)=>{
             console.log("Username already exist");
             res.render("error",{Heading:"Error",Errormsg:"Username already exist"});
         }else{
-            newUser = new User({
+           const newUser = new User({
                 username:username,
                 password:password
             });
@@ -144,7 +151,7 @@ app.post("/book/:busId", async (req, res) => {
         await bus.save();
         const alreadyBooked = await myBookings.findOne({username:user,date:bus.date,busName:bus.busId,from:bus.from,to:bus.to});
         if(!alreadyBooked){
-            newBooking = new myBookings({
+            const newBooking = new myBookings({
                 username:user,
                 date:bus.date,
                 busName:bus.busId,
